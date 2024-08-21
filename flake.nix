@@ -29,6 +29,8 @@
         pkgs.rust-analyzer
         pkgs.lldb_9
         pkgs.gdb
+        pkgs.pkg-config
+        pkgs.systemd
       ];
 
       shellHook = ''
