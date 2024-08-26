@@ -19,7 +19,25 @@
         lockFile = ./Cargo.lock;
       };
       src = self;
-      # buildInputs = [ pkgs.rustc pkgs.cargo ];
+      buildInputs = [
+        pkgs.rustc
+        pkgs.cargo
+        pkgs.rust-analyzer
+        pkgs.lldb_9
+        pkgs.gdb
+        pkgs.pkg-config
+        pkgs.systemd
+      ];
+
+      nativeBuildInputs = [
+        pkgs.rustc
+        pkgs.cargo
+        pkgs.rust-analyzer
+        pkgs.lldb_9
+        pkgs.gdb
+        pkgs.pkg-config
+        pkgs.systemd
+      ];
     };
 
     devShells.${system}.default = pkgs.mkShell {
