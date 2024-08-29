@@ -7,7 +7,7 @@
 
   outputs = { self, nixpkgs }: 
   let
-    system = "riscv64-linux";
+    system = "x86_64-linux";
     pkgs = import nixpkgs{
       inherit system;
     };
@@ -37,6 +37,7 @@
         pkgs.gdb
         pkgs.pkg-config
         pkgs.systemd
+        pkgs.udev
       ];
     };
 
@@ -49,6 +50,7 @@
         pkgs.gdb
         pkgs.pkg-config
         pkgs.systemd
+        pkgs.udev
       ];
 
       shellHook = ''
