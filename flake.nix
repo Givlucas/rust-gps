@@ -1,5 +1,5 @@
 {
-  description = "nn in rust";
+  description = "rust-gps";
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-23.11";
   };
